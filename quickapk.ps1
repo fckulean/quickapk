@@ -5,7 +5,6 @@ $adb_path = "C:\adb"
 # Main script
 
 if (Test-Path "$PSScriptRoot/apks" -PathType Container) {
-    return $null
 } else {
     ni "$PSScriptRoot/apks" -ItemType "directory"
 }
@@ -18,6 +17,9 @@ function Prog {Param($name,[double]$perc,$bgcl)
 }
 
 Clear
+
+Prog "Installing - 6/10 - ayugram-universal.apk" 60 Green
+
 Write-Host "quickapk 1.0 - https://github.com/fckulean/quickapk"
 Write-Host "apks to install: $((gci apks).length)"
 $input = Read-Host "Confirm [Y/N]"
