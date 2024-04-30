@@ -4,6 +4,12 @@ $adb_path = "C:\adb"
 
 # Main script
 
+if (Test-Path "$PSScriptRoot/apks" -PathType Container) {
+    return $null
+} else {
+    ni "$PSScriptRoot/apks" -ItemType "directory"
+}
+
 function Prog {Param($name,[double]$perc,$bgcl) 
     Write-Host "$('#'*([Math]::Round($perc/5)))" -BackgroundColor $bgcl -ForegroundColor Black -NoNewline
     Write-Host "$('#'*([Math]::Round(20-($perc/5))))" -BackgroundColor DarkGray -NoNewline -ForegroundColor Black
