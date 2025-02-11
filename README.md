@@ -11,4 +11,5 @@ Quickly install your vital .apks after wiping your Android device or flashing ne
    <br>![image](https://github.com/fckulean/quickapk/assets/77857343/a3de3950-2e6f-4367-8dd5-6e3fee73dfb1)
 4. Place your apks in `./apks` folder
 5. Run script with PowerShell
-6. Done!
+6. ???
+7. Profit!
